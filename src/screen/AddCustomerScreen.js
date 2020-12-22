@@ -5,11 +5,13 @@ import variables, { colors, mock } from "../theme/variables.js";
 import { Button } from "react-native";
 import HeaderLayout from "../layout/HeaderLayout";
 import StackHeaderLayout from "../layout/StackHeaderLayout.js";
+import TitleLayout from "../layout/TitleLayout.js";
 
 export default function AddCustomerScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <StackHeaderLayout navigation={navigation} title="Add Customer" />
+      <TitleLayout title="Add Customer" />
       <View style={styles.content}>
         <Text style={styles.text}>Add customer</Text>
       </View>
@@ -27,7 +29,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
   },
   text: {

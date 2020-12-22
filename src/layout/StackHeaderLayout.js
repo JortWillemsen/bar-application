@@ -5,7 +5,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { colors, mock } from "../theme/variables.js";
 import { useIsDrawerOpen } from "@react-navigation/drawer";
 
-export default function StackHeaderLayout({ navigation, title }) {
+export default function StackHeaderLayout({ navigation }) {
   const navigateBack = () => {
     navigation.goBack();
   };
@@ -21,7 +21,7 @@ export default function StackHeaderLayout({ navigation, title }) {
         </TouchableOpacity>
       </View>
       <View style={styles.header__center}>
-        <Text style={styles.header__title}>{title}</Text>
+        <Text style={styles.header__title}>{mock.ORGANISATION_NAME}</Text>
       </View>
       <View style={styles.header__right}></View>
     </View>

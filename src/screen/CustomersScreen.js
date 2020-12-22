@@ -12,12 +12,13 @@ import variables, { colors, mock, sizes } from "../theme/variables.js";
 import HeaderLayout from "../layout/HeaderLayout";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { ceil } from "react-native-reanimated";
+import TitleLayout from "../layout/TitleLayout.js";
 
 export default function CustomersScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <HeaderLayout navigation={navigation} />
-      <Text style={styles.title}>Customers</Text>
+      <TitleLayout title="Customers" />
       <View style={styles.content}>
         <FlatList
           keyExtractor={(item) => item.id}
