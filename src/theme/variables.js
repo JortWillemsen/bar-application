@@ -6,6 +6,8 @@ export const colors = {
   TEXT_PRIMARY: "#fff",
   TEXT_SECONDARY: "#484848",
   TEXT_TERTIARY: "#383838",
+
+  INPUT_BORDER: "#484848",
 };
 
 export const sizes = {
@@ -15,7 +17,7 @@ export const sizes = {
 //TODO: Connect to API
 export const mock = {
   ORGANISATION_NAME: "Bart's Bar",
-  SESSION_NAME: "Oudjaarsavond",
+  CURRENT_SESSION_NAME: "Oudjaarsavond",
 
   //TODO: Convert ID to key for every customer
   CUSTOMERS: [

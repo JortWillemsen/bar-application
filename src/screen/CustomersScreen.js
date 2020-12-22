@@ -13,6 +13,7 @@ import HeaderLayout from "../layout/HeaderLayout";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { ceil } from "react-native-reanimated";
 import TitleLayout from "../layout/TitleLayout.js";
+import ButtonLayout from "../layout/ButtonLayout.js";
 
 export default function CustomersScreen({ navigation }) {
   return (
@@ -42,11 +43,10 @@ function listItem(customer) {
 
 const listFooterItem = (navigation) => {
   return (
-    <TouchableOpacity onPress={() => navigation.navigate("Add new customer")}>
-      <View style={styles.listItem__footer}>
-        <Text style={styles.listItem__footer__text}>Add a new customer</Text>
-      </View>
-    </TouchableOpacity>
+    <ButtonLayout
+      title="Add new customer"
+      onPress={() => navigation.navigate("Add new customer")}
+    />
   );
 };
 
