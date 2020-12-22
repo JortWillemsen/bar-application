@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   listItem__footer__text: {
-    color: colors.TEXT_SECONDARY,
+    color: colors.TEXT_PRIMARY,
     fontSize: 20,
     fontWeight: "bold",
   },

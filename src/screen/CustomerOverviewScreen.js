@@ -9,40 +9,19 @@ import TitleLayout from "../layout/TitleLayout.js";
 import { TextInput } from "react-native";
 import ButtonLayout from "../layout/ButtonLayout.js";
 
-export default function AddCustomerScreen({ navigation }) {
+export default function CustomerOverviewScreen({ route, navigation }) {
+  const customer = route.params;
+  console.log(customer);
+
   return (
     <SafeAreaView style={styles.container}>
       <StackHeaderLayout navigation={navigation} title="Add Customer" />
-      <TitleLayout title="Add Customer" />
+      <TitleLayout title={customer.name} />
       <View style={styles.content}>
-        <TextInput
-          autoCapitalize="words"
-          placeholderTextColor={colors.TEXT_SECONDARY}
-          placeholder="Name"
-          style={styles.input}
-        ></TextInput>
-        <TextInput
-          name="telNumber"
-          textContentType="telephoneNumber"
-          autoCapitalize="words"
-          placeholderTextColor={colors.TEXT_SECONDARY}
-          placeholder="Phone number"
-          keyboardType="number-pad"
-          style={styles.input}
-        ></TextInput>
-        <ButtonLayout
-          title="Add customer"
-          onPress={() => {
-            addCustomer(navigation);
-          }}
-        />
+        <Text style={styles.text}>{customer.id}</Text>
       </View>
     </SafeAreaView>
   );
-}
-
-function addCustomer(navigation) {
-  navigation.navigate("Customers");
 }
 
 const styles = StyleSheet.create({

@@ -8,6 +8,7 @@ import AddCustomerScreen from "./src/screen/AddCustomerScreen";
 import DrawerLayout from "./src/layout/DrawerLayout";
 import { colors, mock } from "./src/theme/variables";
 import { StyleSheet } from "react-native";
+import CustomerOverviewScreen from "./src/screen/CustomerOverviewScreen";
 
 const DrawerNavigator = createDrawerNavigator();
 const CustomersNavigator = createStackNavigator();
@@ -19,6 +20,10 @@ export function CustomersStack() {
       initialRouteName="Customers"
     >
       <CustomersNavigator.Screen name="Customers" component={CustomersScreen} />
+      <CustomersNavigator.Screen
+        name="CustomerOverview"
+        component={CustomerOverviewScreen}
+      />
       <CustomersNavigator.Screen
         name="Add new customer"
         component={AddCustomerScreen}
