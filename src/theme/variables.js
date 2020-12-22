@@ -24,6 +24,27 @@ export const mock = {
     {
       id: 1,
       name: "Jort Willemsen",
+      sessions: [1],
+      bills: [
+        {
+          id: 1,
+          orders: [
+            {
+              id: 1,
+              drinks: [
+                {
+                  name: "Apple bandit",
+                  amount: 2,
+                },
+                {
+                  name: "Heiniken vaasje",
+                  amount: 1,
+                },
+              ],
+            },
+          ],
+        },
+      ],
     },
     {
       id: 2,
@@ -44,6 +65,14 @@ export const mock = {
     {
       id: 6,
       name: "Dante Bloemendaal",
+    },
+  ],
+
+  SESSIONS: [
+    {
+      id: 1,
+      name: "Oudjaarsavond",
+      customers: [1, 3, 5],
     },
   ],
 };
